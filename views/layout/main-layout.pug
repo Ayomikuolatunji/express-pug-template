@@ -5,7 +5,7 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         link(rel="stylesheet", href="/css/main.css")
-        title 404
+        title #{title}
         block styles
     body 
         header.main-header
@@ -14,5 +14,5 @@ html(lang="en")
                     li.main-header__item
                         a(href="/", class=(path==="/" ? "active" : "")) shop 
                     li.main-header__item
-                        a(href="/admin/add-product", class=(path==="admin/add-product" ? "active" : "")) Add Product  
+                        a(href="/admin/add-product", class=(path==="/admin/add-product" ? "active" : "")) Add Product  
         block content
