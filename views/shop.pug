@@ -1,0 +1,28 @@
+extends layout/main-layout
+  
+block styles 
+    link(rel="stylesheet", href="/css/product.css") 
+
+block content 
+    main
+        h1 My Products
+        p List of all the products..
+         //- loop through it
+        if prod.length>0
+            each product in prod
+                .grid.product-form 
+                    article.product-item 
+                        header.card__header
+                        h1.product__title #{product.title.toUpperCase()}
+                    .card__image
+                        img(src="/img/Forex.PNG", alt="img")
+                    .card__content
+                        h2.product__price $ #{product.price}
+                        p.product__description You can get your interesting books at cheap rate! 
+                    .card__action
+                        button.btn Add to cart 
+        else 
+            h1  No product                    
+                   
+                   
+    

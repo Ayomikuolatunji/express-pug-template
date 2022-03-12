@@ -1,0 +1,16 @@
+extends layout/main-layout
+
+block styles
+    link(rel="stylesheet", href="/css/product.css")
+    link(rel="stylesheet", href="/css/form.css")
+block content 
+    form.product-form(action="/admin/add-product", method="POST")
+        .form-control
+            label(for="title")  title
+            input(type="text",name="title", placeholder="title")
+        .form-control
+            label(for="price")  price
+            input(type="text",name="price", placeholder="price")                          
+        button.btn(type="submit") add book         
+            
+    
