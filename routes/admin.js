@@ -10,7 +10,7 @@ routerAdmin.get("/add-product",(req, res, next) => {
     res.render("add-product", {title:"shop"})
 })
 routerAdmin.post("/add-product",(req,res,next)=>{
-    products.push({title:req.body.title,price:req.body.price})
+    products.push({title:req.body.title,price:req.body.price, path:"admin/add-product"})
     res.redirect("/")
 })
 
